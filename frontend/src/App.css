@@ -1,0 +1,245 @@
+/* ===========================
+   Root Layout
+=========================== */
+.app-container {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s, color 0.3s;
+}
+
+.app-container.light {
+  background: #f9fafb;
+  color: #222;
+}
+
+.app-container.dark {
+  background: #111827;
+  color: #f5f5f5;
+}
+
+/* ===========================
+   Header
+=========================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header.light {
+  border-color: #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  color: #a855f7;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.nav-links button:hover {
+  color: #a855f7;
+}
+
+.theme-btn {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.4rem;
+  border-radius: 8px;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+.hero-section {
+  text-align: center;
+  padding: 8rem 2rem;
+}
+
+.hero-icon {
+  width: 60px;
+  height: 60px;
+  color: #ec4899;
+  margin-bottom: 1rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.button-primary {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 2.5rem;
+}
+
+.button-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+}
+
+/* ===========================
+   Generator Layout
+=========================== */
+.generator {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 3rem;
+}
+
+.generator-left,
+.generator-right {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.generator h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.generator label {
+  display: block;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.generator input,
+.generator textarea {
+  width: 100%;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: inherit;
+  resize: none;
+}
+
+.button-secondary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom:2.5rem;
+}
+
+.button-secondary:hover {
+  background: #1d4ed8;
+}
+
+.output-box {
+  min-height: 150px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.preview-box {
+  text-align: center;
+  padding: 2rem;
+  opacity: 0.7;
+  border: 1px dashed #555;
+  border-radius: 12px;
+}
+
+.preview-icon {
+  width: 60px;
+  height: 60px;
+  opacity: 0.5;
+}
+
+/* ===========================
+   Footer
+=========================== */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   Toast
+=========================== */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  color: white;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
